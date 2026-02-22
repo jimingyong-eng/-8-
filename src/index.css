@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+}
+
+body {
+  @apply bg-neutral-900 text-white font-sans overflow-hidden;
+  background-image: radial-gradient(circle at center, #1a4a1a 0%, #0d2a0d 100%);
+}
+
+.card-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.felt-table {
+  background: radial-gradient(circle at center, #2d5a27 0%, #1e3d1a 100%);
+  position: relative;
+}
+
+.felt-table::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+  opacity: 0.2;
+  pointer-events: none;
+}
+
